@@ -1,17 +1,17 @@
 ﻿namespace DesignPatterns.FluentBuilder
 {
-    public class ConcreteBuilderAb : Builder
+    public class ConcreteBuilderCd : Builder
     {
         public readonly Product Product = new Product();
 
         public override void IncludePartOne()
         {
-            Product.Add("Part A");
+            Product.Add("Part C");
         }
 
         public override void IncludePartTwo()
         {
-            Product.Add("Part B");
+            Product.Add("Part D");
         }
 
         public override Product Build()
