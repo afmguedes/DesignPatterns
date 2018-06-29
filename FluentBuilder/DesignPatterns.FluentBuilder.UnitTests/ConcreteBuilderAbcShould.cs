@@ -1,4 +1,4 @@
-﻿using System;
+﻿using FluentAssertions;
 using NUnit.Framework;
 
 namespace DesignPatterns.FluentBuilder.UnitTests
@@ -7,9 +7,13 @@ namespace DesignPatterns.FluentBuilder.UnitTests
     public class ConcreteBuilderAbcShould
     {
         [Test]
-        public void Pass()
+        public void ReturnAProduct_WhenBuildIsCalled()
         {
+            var concreteBuilderAbc = new ConcreteBuilderAbc();
 
+            var actual = concreteBuilderAbc.Build();
+
+            actual.Should().BeOfType<Product>();
         }
     }
 }
