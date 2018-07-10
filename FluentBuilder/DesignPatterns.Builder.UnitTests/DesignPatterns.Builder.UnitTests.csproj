@@ -12,7 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\DesignPatterns.FluentBuilder\DesignPatterns.FluentBuilder.csproj" />
+    <ProjectReference Include="..\DesignPatterns.Builder\DesignPatterns.Builder.csproj" />
   </ItemGroup>
 
 </Project>

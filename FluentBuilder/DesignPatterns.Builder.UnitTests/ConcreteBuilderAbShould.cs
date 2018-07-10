@@ -1,17 +1,17 @@
 ﻿using FluentAssertions;
 using NUnit.Framework;
 
-namespace DesignPatterns.FluentBuilder.UnitTests
+namespace DesignPatterns.Builder.UnitTests
 {
     [TestFixture]
-    public class ConcreteBuilderCdShould
+    public class ConcreteBuilderAbShould
     {
         [Test]
         public void ReturnAProduct_WhenBuildIsCalled()
         {
-            var concreteBuilderCd = new ConcreteBuilderCd();
+            var concreteBuilderAb = new ConcreteBuilderAb();
 
-            var actual = concreteBuilderCd.Build();
+            var actual = concreteBuilderAb.Build();
 
             actual.Should().BeOfType<Product>();
         }
@@ -20,12 +20,12 @@ namespace DesignPatterns.FluentBuilder.UnitTests
         public void ReturnAProductWithAPartOne_WhenBuildIsCalled()
         {
             var expectedProduct = new Product();
-            expectedProduct.Add("Part C");
+            expectedProduct.Add("Part A");
 
-            var concreteBuilderCd = new ConcreteBuilderCd();
+            var concreteBuilderAb = new ConcreteBuilderAb();
 
-            concreteBuilderCd.IncludePartOne();
-            var actual = concreteBuilderCd.Build();
+            concreteBuilderAb.IncludePartOne();
+            var actual = concreteBuilderAb.Build();
 
             actual.Should().BeEquivalentTo(expectedProduct);
         }
@@ -34,12 +34,12 @@ namespace DesignPatterns.FluentBuilder.UnitTests
         public void ReturnAProductWithAPartTwo_WhenBuildIsCalled()
         {
             var expectedProduct = new Product();
-            expectedProduct.Add("Part D");
+            expectedProduct.Add("Part B");
 
-            var concreteBuilderCd = new ConcreteBuilderCd();
+            var concreteBuilderAb = new ConcreteBuilderAb();
 
-            concreteBuilderCd.IncludePartTwo();
-            var actual = concreteBuilderCd.Build();
+            concreteBuilderAb.IncludePartTwo();
+            var actual = concreteBuilderAb.Build();
 
             actual.Should().BeEquivalentTo(expectedProduct);
         }

@@ -1,4 +1,4 @@
-﻿namespace DesignPatterns.FluentBuilder
+﻿namespace DesignPatterns.Builder
 {
     public class Director
     {

@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace DesignPatterns.FluentBuilder
+namespace DesignPatterns.Builder
 {
     public class Product
     {

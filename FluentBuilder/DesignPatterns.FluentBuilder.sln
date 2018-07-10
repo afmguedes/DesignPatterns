@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27703.2026
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DesignPatterns.FluentBuilder", "DesignPatterns.FluentBuilder\DesignPatterns.FluentBuilder.csproj", "{F5FCF236-0C6A-4194-B71A-5F11C54571E0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DesignPatterns.Builder", "DesignPatterns.Builder\DesignPatterns.Builder.csproj", "{F5FCF236-0C6A-4194-B71A-5F11C54571E0}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{68050295-33D7-42B2-B93E-FBCF84E219B5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesignPatterns.FluentBuilder.UnitTests", "DesignPatterns.FluentBuilder.UnitTests\DesignPatterns.FluentBuilder.UnitTests.csproj", "{EA9B3A12-CA61-4137-A1EC-33994D2CA548}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DesignPatterns.Builder.UnitTests", "DesignPatterns.Builder.UnitTests\DesignPatterns.Builder.UnitTests.csproj", "{EA9B3A12-CA61-4137-A1EC-33994D2CA548}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

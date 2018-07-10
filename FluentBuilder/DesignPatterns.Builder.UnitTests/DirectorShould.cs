@@ -1,7 +1,7 @@
 ﻿using FluentAssertions;
 using NUnit.Framework;
 
-namespace DesignPatterns.FluentBuilder.UnitTests
+namespace DesignPatterns.Builder.UnitTests
 {
     [TestFixture]
     public class DirectorShould
