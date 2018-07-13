@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesignPatterns.FluentBuilde
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesignPatterns.FluentBuilder", "DesignPatterns.FluentBuilder\DesignPatterns.FluentBuilder.csproj", "{8FAA2EF0-DD16-473B-AA98-17A29699B2D3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesignPatterns.FluentPizzaBuilder.UnitTests", "DesignPatterns.FluentPizzaBuilder.UnitTests\DesignPatterns.FluentPizzaBuilder.UnitTests.csproj", "{5EA73F92-322C-4D6D-AE02-4CAA8BAD41B0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,6 +37,10 @@ Global
 		{8FAA2EF0-DD16-473B-AA98-17A29699B2D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8FAA2EF0-DD16-473B-AA98-17A29699B2D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8FAA2EF0-DD16-473B-AA98-17A29699B2D3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5EA73F92-322C-4D6D-AE02-4CAA8BAD41B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5EA73F92-322C-4D6D-AE02-4CAA8BAD41B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5EA73F92-322C-4D6D-AE02-4CAA8BAD41B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5EA73F92-322C-4D6D-AE02-4CAA8BAD41B0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -42,6 +48,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{EA9B3A12-CA61-4137-A1EC-33994D2CA548} = {68050295-33D7-42B2-B93E-FBCF84E219B5}
 		{04FB30C5-2B49-4274-9E4F-F98753BED61F} = {68050295-33D7-42B2-B93E-FBCF84E219B5}
+		{5EA73F92-322C-4D6D-AE02-4CAA8BAD41B0} = {68050295-33D7-42B2-B93E-FBCF84E219B5}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A161DBCF-44A5-4CB4-BE45-D061FEAA5DC8}
