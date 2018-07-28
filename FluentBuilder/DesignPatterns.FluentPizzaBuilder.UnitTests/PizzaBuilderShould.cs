@@ -1,4 +1,5 @@
-﻿using FluentAssertions;
+﻿using System.Collections.Generic;
+using FluentAssertions;
 using NUnit.Framework;
 
 namespace DesignPatterns.FluentPizzaBuilder.UnitTests
@@ -9,81 +10,63 @@ namespace DesignPatterns.FluentPizzaBuilder.UnitTests
         [Test]
         public void ReturnAPizza_WhenBakeIsCalled()
         {
-            var pizzaBuilder = new PizzaBuilder();
+            var customPizza = new PizzaBuilder();
 
-            var actualPizza = pizzaBuilder.Bake();
+            var actualPizza = customPizza.Bake();
 
             actualPizza.Should().BeOfType<Pizza>();
         }
 
         [Test]
-        public void ReturnAPizzaWithSize_WhenWithSizeIsCalled()
+        public void ReturnExpectedPizza_WhenWithSizeIsCalled()
         {
             var expectedPizza = new Pizza {Size = Size.Large};
-            var pizzaBuilder = new PizzaBuilder();
+            var customPizza = new PizzaBuilder();
 
-            var actualPizza = pizzaBuilder
-                .WithSize(Size.Large)
-                .Bake();
+	        customPizza.WithSize(Size.Large);
+	        var actualPizza = customPizza.Bake();
 
             actualPizza.Should().BeEquivalentTo(expectedPizza);
         }
 
         [Test]
-        public void ReturnAPizzaWithSizeAndCrust_WhenWithSizeAndWithCrustCalled()
+        public void ReturnExpectedPizza_WhenWithSizeAndWithCrustCalled()
         {
             var expectedPizza = new Pizza { Size = Size.Large, Crust = CrustType.Stuffed };
-            var pizzaBuilder = new PizzaBuilder();
+            var customPizza = new PizzaBuilder();
 
-            var actualPizza = pizzaBuilder
-                .WithSize(Size.Large)
-                .WithCrust(CrustType.Stuffed)
-                .Bake();
+	        customPizza.WithSize(Size.Large)
+		        .WithCrust(CrustType.Stuffed);
+	        var actualPizza = customPizza.Bake();
 
-            actualPizza.Should().BeEquivalentTo(expectedPizza);
-        }
-    }
-
-    public class Pizza
-    {
-        public Size Size { get; set; }
-        public CrustType Crust { get; set; }
-    }
-
-    public enum CrustType
-    {
-        Classic,
-        Stuffed,
-        Thin
-    }
-
-    public enum Size
-    {
-        Small,
-        Medium,
-        Large,
-        ExtraLarge
-    }
-
-    public class PizzaBuilder
-    {
-        private Pizza pizza = new Pizza();
-
-        public PizzaBuilder WithSize(Size size)
-        {
-            pizza.Size = size;
-            return this;
+			actualPizza.Should().BeEquivalentTo(expectedPizza);
         }
 
-        public PizzaBuilder WithCrust(CrustType typeOfCrust)
-        {
-            pizza.Crust = typeOfCrust;
-            return this;
-        }
+	    [Test]
+	    public void ReturnExpectedPizza_WhenWithSizeAndWithCrustAndWithSauceCalled() {
+		    var expectedPizza = new Pizza { Size = Size.Large, Crust = CrustType.Stuffed, SauceType = SauceType.Tomato };
+		    var customPizza = new PizzaBuilder();
 
-        public Pizza Bake()
-        {
-            return pizza;
-        }
-    }
+		    customPizza.WithSize(Size.Large)
+			    .WithCrust(CrustType.Stuffed)
+				.WithSauce(SauceType.Tomato);
+		    var actualPizza = customPizza.Bake();
+
+		    actualPizza.Should().BeEquivalentTo(expectedPizza);
+	    }
+
+	    [Test]
+	    public void ReturnExpectedPizza_WhenWithSizeAndWithCrustAndWithSauceAndAddToppingCalled() {
+		    var expectedPizza = new Pizza { Size = Size.Large, Crust = CrustType.Stuffed, SauceType = SauceType.Tomato, Toppings = new List<Toppings> {Toppings.Mushrooms} };
+		    var customPizza = new PizzaBuilder();
+
+		    customPizza.WithSize(Size.Large)
+			    .WithCrust(CrustType.Stuffed)
+			    .WithSauce(SauceType.Tomato)
+				.AddTopping(Toppings.Mushrooms);
+		    var actualPizza = customPizza.Bake();
+
+		    actualPizza.Should().BeEquivalentTo(expectedPizza);
+	    }
+	}
 }
