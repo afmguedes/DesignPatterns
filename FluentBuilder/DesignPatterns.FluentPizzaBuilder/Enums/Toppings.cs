@@ -1,4 +1,5 @@
-﻿namespace DesignPatterns.FluentPizzaBuilder {
+﻿namespace DesignPatterns.FluentPizzaBuilder
+{
 	public enum Toppings
 	{
 		BabySpinach,

@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 
-namespace DesignPatterns.FluentPizzaBuilder {
+namespace DesignPatterns.FluentPizzaBuilder
+{
 	public class Pizza
 	{
 		public List<Toppings> Toppings = new List<Toppings>();

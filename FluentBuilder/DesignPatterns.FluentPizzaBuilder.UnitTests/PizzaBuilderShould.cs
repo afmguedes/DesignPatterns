@@ -43,7 +43,8 @@ namespace DesignPatterns.FluentPizzaBuilder.UnitTests
         }
 
 	    [Test]
-	    public void ReturnExpectedPizza_WhenWithSizeAndWithCrustAndWithSauceCalled() {
+	    public void ReturnExpectedPizza_WhenWithSizeAndWithCrustAndWithSauceCalled()
+		{
 		    var expectedPizza = new Pizza { Size = Size.Large, Crust = CrustType.Stuffed, SauceType = SauceType.Tomato };
 		    var customPizza = new PizzaBuilder();
 
@@ -56,7 +57,8 @@ namespace DesignPatterns.FluentPizzaBuilder.UnitTests
 	    }
 
 	    [Test]
-	    public void ReturnExpectedPizza_WhenWithSizeAndWithCrustAndWithSauceAndAddToppingCalled() {
+	    public void ReturnExpectedPizza_WhenWithSizeAndWithCrustAndWithSauceAndAddToppingCalled()
+		{
 		    var expectedPizza = new Pizza { Size = Size.Large, Crust = CrustType.Stuffed, SauceType = SauceType.Tomato, Toppings = new List<Toppings> {Toppings.Mushrooms} };
 		    var customPizza = new PizzaBuilder();
 
@@ -65,6 +67,22 @@ namespace DesignPatterns.FluentPizzaBuilder.UnitTests
 			    .WithSauce(SauceType.Tomato)
 				.AddTopping(Toppings.Mushrooms);
 		    var actualPizza = customPizza.Bake();
+
+		    actualPizza.Should().BeEquivalentTo(expectedPizza);
+	    }
+
+	    [Test]
+	    public void ReturnExpectedPizza_WhenWithSizeAndWithCrustAndWithSauceAndAddToppingTwiceCalled()
+		{
+		    var expectedPizza = new Pizza { Size = Size.Large, Crust = CrustType.Stuffed, SauceType = SauceType.Tomato, Toppings = new List<Toppings> { Toppings.Mushrooms, Toppings.Ham } };
+		    var customPizza = new PizzaBuilder();
+
+		    customPizza.WithSize(Size.Large)
+			    .WithCrust(CrustType.Stuffed)
+			    .WithSauce(SauceType.Tomato)
+			    .AddTopping(Toppings.Mushrooms)
+			    .AddTopping(Toppings.Ham);
+			var actualPizza = customPizza.Bake();
 
 		    actualPizza.Should().BeEquivalentTo(expectedPizza);
 	    }
