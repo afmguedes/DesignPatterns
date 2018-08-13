@@ -2,6 +2,6 @@
 {
 	public interface IPizzaBuilderCrust
 	{
-		IPizzaBuilderSauce WithCrust(CrustType selectedCrust);
+		IPizzaBuilderSauce WithCrust(Crusts selectedCrust);
 	}
 }

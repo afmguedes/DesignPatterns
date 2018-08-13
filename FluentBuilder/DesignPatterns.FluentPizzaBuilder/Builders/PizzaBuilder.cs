@@ -6,21 +6,21 @@ namespace DesignPatterns.FluentPizzaBuilder
 	{
 		private Pizza pizza = new Pizza();
 
-		public IPizzaBuilderCrust WithSize(Size selectedSize)
+		public IPizzaBuilderCrust CreatePizzaWithSize(Size selectedSize)
 		{
-			pizza.Size = selectedSize;
+			pizza = new Pizza {Size = selectedSize};
 			return this;
 		}
 
-		public IPizzaBuilderSauce WithCrust(CrustType selectedCrust)
+		public IPizzaBuilderSauce WithCrust(Crusts selectedCrust)
 		{
 			pizza.Crust = selectedCrust;
 			return this;
 		}
 
-		public IPizzaBuilderToppings WithSauce(SauceType selectedSauce)
+		public IPizzaBuilderToppings WithSauce(Sauces selectedSauce)
 		{
-			pizza.SauceType = selectedSauce;
+			pizza.Sauce = selectedSauce;
 			return this;
 		}
 

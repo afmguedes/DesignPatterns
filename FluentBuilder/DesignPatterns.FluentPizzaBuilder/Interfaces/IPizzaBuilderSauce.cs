@@ -2,6 +2,6 @@
 {
 	public interface IPizzaBuilderSauce
 	{
-		IPizzaBuilderToppings WithSauce(SauceType selectedSauce);
+		IPizzaBuilderToppings WithSauce(Sauces selectedSauce);
 	}
 }
