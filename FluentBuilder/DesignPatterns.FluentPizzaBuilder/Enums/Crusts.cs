@@ -1,6 +1,6 @@
 ﻿namespace DesignPatterns.FluentPizzaBuilder
 {
-	public enum CrustType
+	public enum Crusts
 	{
 		Classic,
 		Stuffed,

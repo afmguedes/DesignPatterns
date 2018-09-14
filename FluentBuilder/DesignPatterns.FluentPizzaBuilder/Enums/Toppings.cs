@@ -9,6 +9,7 @@
 		GreenPeppers,
 		GroundBeef,
 		Ham,
+		Mozzarella,
 		Mushrooms,
 		Pepperoni,
 		Pineapple,

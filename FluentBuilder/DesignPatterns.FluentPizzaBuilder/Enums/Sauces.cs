@@ -1,7 +1,7 @@
 ﻿namespace DesignPatterns.FluentPizzaBuilder
 {
-	public enum SauceType {
-		None,
+	public enum Sauces {
+		No,
 		Tomato,
 		Barbecue
 	}
