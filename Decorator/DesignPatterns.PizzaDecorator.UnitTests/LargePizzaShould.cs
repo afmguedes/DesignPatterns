@@ -11,9 +11,9 @@ namespace DesignPatterns.PizzaDecorator.UnitTests
         public void ReturnCost_WhenGetCostIsCalled()
         {
             var expectedCost = 7.0;
-            var smallPizza = new LargePizza();
+            var largePizza = new LargePizza();
 
-            var actualCost = smallPizza.GetCost();
+            var actualCost = largePizza.GetCost();
 
             actualCost.Should().Be(expectedCost);
         }
@@ -22,9 +22,9 @@ namespace DesignPatterns.PizzaDecorator.UnitTests
         public void ReturnDescription_WhenGetDescriptionIsCalled()
         {
             var expectedDescription = "Large Pizza";
-            var classicPizza = new LargePizza();
+            var largePizza = new LargePizza();
 
-            var actualDescription = classicPizza.GetDescription();
+            var actualDescription = largePizza.GetDescription();
 
             actualDescription.Should().Be(expectedDescription);
         }

@@ -22,9 +22,9 @@ namespace DesignPatterns.PizzaDecorator.UnitTests
         public void ReturnDescription_WhenGetDescriptionIsCalled()
         {
             var expectedDescription = "Small Pizza";
-            var classicPizza = new SmallPizza();
+            var smallPizza = new SmallPizza();
 
-            var actualDescription = classicPizza.GetDescription();
+            var actualDescription = smallPizza.GetDescription();
 
             actualDescription.Should().Be(expectedDescription);
         }
