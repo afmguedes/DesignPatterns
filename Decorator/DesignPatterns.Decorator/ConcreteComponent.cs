@@ -4,7 +4,7 @@
     {
         public override string Operation()
         {
-            return "ConcreteComponent.Operation()";
+            return "ConcreteComponent.Operation();";
         }
     }
 }

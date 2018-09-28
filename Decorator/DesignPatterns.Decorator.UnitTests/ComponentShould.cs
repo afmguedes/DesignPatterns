@@ -9,7 +9,7 @@ namespace DesignPatterns.Decorator.UnitTests
         [Test]
         public void ReturnOperationResult_WhenOperationIsCalled()
         {
-            var expectedOperationResult = "Component.Operation()";
+            var expectedOperationResult = "Component.Operation();";
             var component = new Component();
 
             var operationResult = component.Operation();

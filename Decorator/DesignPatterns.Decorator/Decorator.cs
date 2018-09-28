@@ -4,7 +4,7 @@
     {
         protected Component Component;
 
-        public void SetComponent(Component component)
+        public virtual void SetComponent(Component component)
         {
             Component = component;
         }

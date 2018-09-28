@@ -4,7 +4,7 @@
     {
         public virtual string Operation()
         {
-            return "Component.Operation()";
+            return "Component.Operation();";
         }
     }
 }

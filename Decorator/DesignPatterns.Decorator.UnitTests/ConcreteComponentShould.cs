@@ -9,7 +9,7 @@ namespace DesignPatterns.Decorator.UnitTests
         [Test]
         public void ReturnOverridenOperation_WhenOperationIsCalled()
         {
-            var expectedOperationResult = "ConcreteComponent.Operation()";
+            var expectedOperationResult = "ConcreteComponent.Operation();";
             var concreteComponent = new ConcreteComponent();
 
             var operationResult = concreteComponent.Operation();
