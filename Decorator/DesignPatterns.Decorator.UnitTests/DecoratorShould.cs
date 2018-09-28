@@ -4,15 +4,17 @@ using NUnit.Framework;
 namespace DesignPatterns.Decorator.UnitTests
 {
     [TestFixture]
-    public class ComponentShould
+    public class DecoratorShould
     {
         [Test]
-        public void ReturnOperationResult_WhenOperationIsCalled()
+        public void ReturnOriginalOperation_WhenOverridenOperationIsCalled()
         {
             var expectedOperationResult = "Component.Operation()";
             var component = new Component();
+            var decorator = new Decorator();
+            decorator.SetComponent(component);
 
-            var operationResult = component.Operation();
+            var operationResult = decorator.Operation();
 
             operationResult.Should().Be(expectedOperationResult);
         }
