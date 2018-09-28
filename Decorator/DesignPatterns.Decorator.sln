@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesignPatterns.Decorator.Un
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesignPatterns.PizzaDecorator.UnitTests", "DesignPatterns.PizzaDecorator.UnitTests\DesignPatterns.PizzaDecorator.UnitTests.csproj", "{A449DA71-6262-4E86-83CE-EF0B4BA8A093}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesignPatterns.PizzaDecorator", "DesignPatterns.PizzaDecorator\DesignPatterns.PizzaDecorator.csproj", "{A903B151-F2CE-4385-96AA-0B98B0689A45}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,6 +31,10 @@ Global
 		{A449DA71-6262-4E86-83CE-EF0B4BA8A093}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A449DA71-6262-4E86-83CE-EF0B4BA8A093}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A449DA71-6262-4E86-83CE-EF0B4BA8A093}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A903B151-F2CE-4385-96AA-0B98B0689A45}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A903B151-F2CE-4385-96AA-0B98B0689A45}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A903B151-F2CE-4385-96AA-0B98B0689A45}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A903B151-F2CE-4385-96AA-0B98B0689A45}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
