@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using FluentAssertions;
+﻿using FluentAssertions;
 using NUnit.Framework;
 
 namespace DesignPatterns.Decorator.UnitTests
@@ -20,19 +17,6 @@ namespace DesignPatterns.Decorator.UnitTests
             var operationResult = concreteDecorator.Operation();
 
             operationResult.Should().Be(expectedOperationResult);
-        }
-    }
-
-    public class ConcreteDecorator : Decorator
-    {
-        public override string Operation()
-        {
-            var stringBuilder = new StringBuilder();
-
-            stringBuilder.AppendLine(base.Operation());
-            stringBuilder.Append("ConcreteDecorator.Operation();");
-
-            return stringBuilder.ToString();
         }
     }
 }
