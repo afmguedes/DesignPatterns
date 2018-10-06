@@ -2,23 +2,27 @@
 
 namespace DesignPatterns.PizzaDecorator.Decorator
 {
-    public class ExtrasDecorator : IPizza
+    public abstract class ExtrasDecorator : Pizza
     {
-        protected IPizza pizza;
+        protected Pizza pizza;
+        protected double cost;
+        protected string description;
 
-        public ExtrasDecorator(IPizza pizza)
+        protected ExtrasDecorator(Pizza pizza)
         {
             this.pizza = pizza;
+            cost = 0.0;
+            description = string.Empty;
         }
 
-        public double GetCost()
+        public override double GetCost()
         {
-            return pizza.GetCost();
+            return pizza.GetCost() + cost;
         }
 
-        public string GetDescription()
+        public override string GetDescription()
         {
-            return pizza.GetDescription();
+            return $"{pizza.GetDescription()}\r\n\t- {description}";
         }
     }
 }

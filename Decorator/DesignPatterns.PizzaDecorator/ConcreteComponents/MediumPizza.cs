@@ -2,16 +2,21 @@
 
 namespace DesignPatterns.PizzaDecorator.ConcreteComponents
 {
-    public class MediumPizza : IPizza
+    public class MediumPizza : Pizza
     {
-        public double GetCost()
+        public MediumPizza()
         {
-            return 6.0;
+            Size = Size.Medium;
         }
 
-        public string GetDescription()
+        public override double GetCost()
         {
-            return "Medium Pizza";
+            return PricingClient.GetSizeCost(Size);
+        }
+
+        public override string GetDescription()
+        {
+            return DescriptionsFactory.MediumPizza;
         }
     }
 }

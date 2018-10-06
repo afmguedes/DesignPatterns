@@ -7,11 +7,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DesignPatterns.Decorator", 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{EC3D1C78-E5B8-43E6-961F-BC23B367CD61}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesignPatterns.Decorator.UnitTests", "DesignPatterns.Decorator.UnitTests\DesignPatterns.Decorator.UnitTests.csproj", "{D8256047-B232-4A46-9B63-358832BCEC35}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DesignPatterns.Decorator.UnitTests", "DesignPatterns.Decorator.UnitTests\DesignPatterns.Decorator.UnitTests.csproj", "{D8256047-B232-4A46-9B63-358832BCEC35}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesignPatterns.PizzaDecorator.UnitTests", "DesignPatterns.PizzaDecorator.UnitTests\DesignPatterns.PizzaDecorator.UnitTests.csproj", "{A449DA71-6262-4E86-83CE-EF0B4BA8A093}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DesignPatterns.PizzaDecorator.UnitTests", "DesignPatterns.PizzaDecorator.UnitTests\DesignPatterns.PizzaDecorator.UnitTests.csproj", "{A449DA71-6262-4E86-83CE-EF0B4BA8A093}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesignPatterns.PizzaDecorator", "DesignPatterns.PizzaDecorator\DesignPatterns.PizzaDecorator.csproj", "{A903B151-F2CE-4385-96AA-0B98B0689A45}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DesignPatterns.PizzaDecorator", "DesignPatterns.PizzaDecorator\DesignPatterns.PizzaDecorator.csproj", "{A903B151-F2CE-4385-96AA-0B98B0689A45}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
