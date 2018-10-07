@@ -13,6 +13,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DesignPatterns.PizzaDecorat
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DesignPatterns.PizzaDecorator", "DesignPatterns.PizzaDecorator\DesignPatterns.PizzaDecorator.csproj", "{A903B151-F2CE-4385-96AA-0B98B0689A45}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesignPatterns.PizzaRestaurant", "DesignPatterns.PizzaRestaurant\DesignPatterns.PizzaRestaurant.csproj", "{B1FDD654-A35B-41A5-BD73-53AEC48E3031}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,6 +37,10 @@ Global
 		{A903B151-F2CE-4385-96AA-0B98B0689A45}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A903B151-F2CE-4385-96AA-0B98B0689A45}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A903B151-F2CE-4385-96AA-0B98B0689A45}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B1FDD654-A35B-41A5-BD73-53AEC48E3031}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B1FDD654-A35B-41A5-BD73-53AEC48E3031}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B1FDD654-A35B-41A5-BD73-53AEC48E3031}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B1FDD654-A35B-41A5-BD73-53AEC48E3031}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
