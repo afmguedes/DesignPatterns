@@ -11,6 +11,10 @@ namespace DesignPatterns.PizzaDecorator.Decorator
         protected ExtrasDecorator(Pizza pizza)
         {
             this.pizza = pizza;
+            Size = pizza.Size;
+            Sauce = pizza.Sauce;
+            Crust = pizza.Crust;
+            Toppings = pizza.Toppings;
             cost = 0.0;
             description = string.Empty;
         }

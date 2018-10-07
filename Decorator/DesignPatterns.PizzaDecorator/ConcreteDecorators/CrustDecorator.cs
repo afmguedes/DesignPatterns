@@ -10,8 +10,8 @@ namespace DesignPatterns.PizzaDecorator.ConcreteDecorators
         {
             Crust = crust;
 
-            cost = PricingClient.GetCrustCost(Crust);
-            description = $"{Crust} crust";
+            cost = PricingClient.GetCrustCost(pizza.Crust);
+            description = $"{pizza.Crust} crust";
         }
     }
 }

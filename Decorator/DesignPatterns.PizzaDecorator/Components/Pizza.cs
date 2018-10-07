@@ -5,8 +5,8 @@ namespace DesignPatterns.PizzaDecorator.Components
     public abstract class Pizza
     {
         public Size Size;
-        public Crusts Crust;
         public Sauces Sauce;
+        public Crusts Crust;
         public List<Toppings> Toppings = new List<Toppings>();
 
         public abstract double GetCost();

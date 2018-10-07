@@ -1,4 +1,6 @@
-﻿namespace DesignPatterns.PizzaDecorator
+﻿using System;
+
+namespace DesignPatterns.PizzaDecorator
 {
     public static class PricingClient
     {

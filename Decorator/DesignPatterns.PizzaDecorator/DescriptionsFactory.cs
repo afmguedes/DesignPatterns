@@ -1,4 +1,4 @@
-﻿namespace DesignPatterns.PizzaDecorator.ConcreteComponents
+﻿namespace DesignPatterns.PizzaDecorator
 {
     public class DescriptionsFactory
     {

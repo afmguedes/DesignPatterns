@@ -2,8 +2,9 @@
 {
     public enum Crusts
     {
+        None,
         Classic,
-        Stuffed,
-        Thin
+        Thin,
+        Stuffed
     }
 }
