@@ -1,7 +1,8 @@
 ﻿using System.Collections.Generic;
 using System.Text;
+using DesignPatterns.FluentPizzaBuilder.Enums;
 
-namespace DesignPatterns.FluentPizzaBuilder
+namespace DesignPatterns.FluentPizzaBuilder.Models
 {
 	public class Pizza
 	{

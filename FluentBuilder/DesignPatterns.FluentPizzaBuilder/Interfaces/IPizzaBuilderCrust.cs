@@ -1,4 +1,6 @@
-﻿namespace DesignPatterns.FluentPizzaBuilder.Interfaces
+﻿using DesignPatterns.FluentPizzaBuilder.Enums;
+
+namespace DesignPatterns.FluentPizzaBuilder.Interfaces
 {
 	public interface IPizzaBuilderCrust
 	{

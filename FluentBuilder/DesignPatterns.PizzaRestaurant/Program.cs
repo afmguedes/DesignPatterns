@@ -1,5 +1,7 @@
 ﻿using System;
 using DesignPatterns.FluentPizzaBuilder;
+using DesignPatterns.FluentPizzaBuilder.Builders;
+using DesignPatterns.FluentPizzaBuilder.Enums;
 
 namespace DesignPatterns.PizzaRestaurant
 {

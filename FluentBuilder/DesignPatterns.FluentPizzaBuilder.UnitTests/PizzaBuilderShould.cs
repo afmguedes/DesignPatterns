@@ -1,4 +1,7 @@
 ﻿using System.Collections.Generic;
+using DesignPatterns.FluentPizzaBuilder.Builders;
+using DesignPatterns.FluentPizzaBuilder.Enums;
+using DesignPatterns.FluentPizzaBuilder.Models;
 using FluentAssertions;
 using NUnit.Framework;
 

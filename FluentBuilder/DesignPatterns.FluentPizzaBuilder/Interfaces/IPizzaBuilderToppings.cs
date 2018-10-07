@@ -1,7 +1,9 @@
-﻿namespace DesignPatterns.FluentPizzaBuilder.Interfaces
+﻿using DesignPatterns.FluentPizzaBuilder.Enums;
+
+namespace DesignPatterns.FluentPizzaBuilder.Interfaces
 {
-	public interface IPizzaBuilderToppings
-	{
-		IPizzaBuilderToppings AddTopping(Toppings selectedTopping);
-	}
+    public interface IPizzaBuilderToppings
+    {
+        IPizzaBuilderToppings AddTopping(Toppings selectedTopping);
+    }
 }

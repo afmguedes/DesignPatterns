@@ -1,4 +1,4 @@
-﻿namespace DesignPatterns.FluentPizzaBuilder
+﻿namespace DesignPatterns.FluentPizzaBuilder.Enums
 {
 	public enum Size
 	{

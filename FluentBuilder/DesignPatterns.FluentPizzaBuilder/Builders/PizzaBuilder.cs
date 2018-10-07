@@ -1,6 +1,8 @@
-﻿using DesignPatterns.FluentPizzaBuilder.Interfaces;
+﻿using DesignPatterns.FluentPizzaBuilder.Enums;
+using DesignPatterns.FluentPizzaBuilder.Interfaces;
+using DesignPatterns.FluentPizzaBuilder.Models;
 
-namespace DesignPatterns.FluentPizzaBuilder
+namespace DesignPatterns.FluentPizzaBuilder.Builders
 {
 	public class PizzaBuilder : IPizzaBuilderCrust, IPizzaBuilderSauce, IPizzaBuilderToppings
 	{
