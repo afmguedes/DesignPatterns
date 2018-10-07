@@ -2,10 +2,22 @@
 {
     public enum Toppings
     {
+        BabySpinach,
         BlackOlives,
-        Cheese,
+        ChickenStrips,
+        Chorizo,
+        GreenPeppers,
+        GroundBeef,
         Ham,
+        Mozzarella,
         Mushrooms,
-        Bacon
+        Pepperoni,
+        Pineapple,
+        RedOnions,
+        RedPeppers,
+        SmokedBacon,
+        SweetCorn,
+        Tomatoes,
+        Tuna
     }
 }

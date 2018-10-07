@@ -1,7 +1,10 @@
 ﻿using System;
+using System.Text;
 using DesignPatterns.PizzaDecorator;
+using DesignPatterns.PizzaDecorator.Components;
 using DesignPatterns.PizzaDecorator.ConcreteComponents;
 using DesignPatterns.PizzaDecorator.ConcreteDecorators;
+using DesignPatterns.PizzaDecoratorFluentBuilder;
 
 namespace DesignPatterns.PizzaRestaurant
 {
@@ -9,31 +12,43 @@ namespace DesignPatterns.PizzaRestaurant
     {
         static void Main(string[] args)
         {
-            var mediumPizza = new MediumPizza();
-            var mediumPizzaWithAddedSauce = new SauceDecorator(mediumPizza, Sauces.Tomato);
-            var mediumPizzaWithAddedCrust = new CrustDecorator(mediumPizzaWithAddedSauce, Crusts.Stuffed);
-            var mediumPizzaWithAddedTopping1 = new ToppingDecorator(mediumPizzaWithAddedCrust, Toppings.BlackOlives);
-            var mediumPizzaWithAddedTopping2 = new ToppingDecorator(mediumPizzaWithAddedTopping1, Toppings.Bacon);
+            var pizzaiolo = new PizzaBuilder();
 
-            Console.WriteLine("Order 1:");
-            Console.WriteLine(mediumPizzaWithAddedTopping2.GetDescription());
-            Console.WriteLine();
-            Console.WriteLine($"Total: {mediumPizzaWithAddedTopping2.GetCost()}");
-            Console.WriteLine();
+            // Order 01
+            pizzaiolo.CreatePizzaWithSize(Size.Medium)
+                .WithSauce(Sauces.Barbecue)
+                .WithCrust(Crusts.Classic)
+                .AddTopping(Toppings.Pepperoni)
+                .AddTopping(Toppings.GreenPeppers)
+                .AddTopping(Toppings.BlackOlives);
 
-            var smallPizza = new SmallPizza();
-            var smallPizzaWithAddedSauce = new SauceDecorator(smallPizza, Sauces.Barbecue);
-            var smallPizzaWithAddedCrust = new CrustDecorator(smallPizzaWithAddedSauce, Crusts.Classic);
-            var smallPizzaWithAddedTopping1 = new ToppingDecorator(smallPizzaWithAddedCrust, Toppings.Mushrooms);
-            var smallPizzaWithAddedTopping2 = new ToppingDecorator(smallPizzaWithAddedTopping1, Toppings.Bacon);
+            var pizza01 = pizzaiolo.Bake();
+            Console.WriteLine(PrintOrder(pizza01));
 
-            Console.WriteLine("Order 2:");
-            Console.WriteLine(smallPizzaWithAddedTopping2.GetDescription());
-            Console.WriteLine();
-            Console.WriteLine($"Total: {smallPizzaWithAddedTopping2.GetCost()}");
-            Console.WriteLine();
+            // Order 02
+            pizzaiolo.CreatePizzaWithSize(Size.Small)
+                .WithSauce(Sauces.No)
+                .WithCrust(Crusts.Thin)
+                .AddTopping(Toppings.Mozzarella)
+                .AddTopping(Toppings.Tomatoes);
+
+            var pizza02 = pizzaiolo.Bake();
+            Console.WriteLine(PrintOrder(pizza02));
 
             Console.ReadKey();
+        }
+
+        private static string PrintOrder(Pizza pizza)
+        {
+            var order = new StringBuilder();
+
+            order.AppendLine("Description:");
+            order.AppendLine($"{pizza.GetDescription()}");
+            order.AppendLine();
+            order.AppendLine($"Total: £{pizza.GetCost():F2}");
+            order.AppendLine();
+
+            return order.ToString();
         }
     }
 }

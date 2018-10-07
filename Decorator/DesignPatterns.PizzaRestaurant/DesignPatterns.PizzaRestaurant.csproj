@@ -6,6 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\DesignPatterns.PizzaDecoratorFluentBuilder\DesignPatterns.PizzaDecoratorFluentBuilder.csproj" />
     <ProjectReference Include="..\DesignPatterns.PizzaDecorator\DesignPatterns.PizzaDecorator.csproj" />
   </ItemGroup>
 

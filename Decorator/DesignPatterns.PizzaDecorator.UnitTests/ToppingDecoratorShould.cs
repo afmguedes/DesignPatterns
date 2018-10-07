@@ -25,7 +25,7 @@ namespace DesignPatterns.PizzaDecorator.UnitTests
         {
             var expectedCost = 5.5;
             var smallPizza = new SmallPizza();
-            var toppingDecorator = new ToppingDecorator(smallPizza, Toppings.Bacon);
+            var toppingDecorator = new ToppingDecorator(smallPizza, Toppings.SmokedBacon);
 
             var actualCost = toppingDecorator.GetCost();
 
@@ -35,7 +35,7 @@ namespace DesignPatterns.PizzaDecorator.UnitTests
         [Test]
         public void ReturnSmallPizzaWithOneToppingDescription_WhenGetDescriptionIsCalled()
         {
-            var expectedToppingDescription = Toppings.Bacon;
+            var expectedToppingDescription = Toppings.SmokedBacon;
             var expectedDescription = $"Small Pizza\r\n\t- {expectedToppingDescription}";
             var smallPizza = new SmallPizza();
             var toppingDecorator = new ToppingDecorator(smallPizza, expectedToppingDescription);
@@ -61,7 +61,7 @@ namespace DesignPatterns.PizzaDecorator.UnitTests
         [Test]
         public void ReturnSmallPizzaWithTwoToppingsDescription_WhenGetDescriptionIsCalled()
         {
-            var expectedFirstToppingDescription = Toppings.Bacon;
+            var expectedFirstToppingDescription = Toppings.SmokedBacon;
             var expectedSecondToppingDescription = Toppings.Mushrooms;
             var expectedDescription =
                 $"Small Pizza\r\n\t- {expectedFirstToppingDescription}\r\n\t- {expectedSecondToppingDescription}";

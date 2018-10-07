@@ -42,12 +42,24 @@ namespace DesignPatterns.PizzaDecorator
 
             switch (topping)
             {
+                case Toppings.BabySpinach:
                 case Toppings.BlackOlives:
-                case Toppings.Cheese:
+                case Toppings.GreenPeppers:
                 case Toppings.Mushrooms:
+                case Toppings.RedOnions:
+                case Toppings.RedPeppers:
+                case Toppings.SweetCorn:
+                case Toppings.Tomatoes:
                     return tierOneToppingCost;
-                case Toppings.Bacon:
+                case Toppings.ChickenStrips:
+                case Toppings.Chorizo:
+                case Toppings.GroundBeef:
                 case Toppings.Ham:
+                case Toppings.Mozzarella:
+                case Toppings.Pepperoni:
+                case Toppings.Pineapple:
+                case Toppings.SmokedBacon:
+                case Toppings.Tuna:
                     return tierTwoToppingCost;
                 default:
                     return 0.0;

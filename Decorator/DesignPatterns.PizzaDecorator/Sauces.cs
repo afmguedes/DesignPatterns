@@ -2,7 +2,7 @@
 {
     public enum Sauces
     {
-        None,
+        No,
         Tomato,
         Barbecue
     }

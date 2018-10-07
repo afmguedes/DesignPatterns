@@ -84,7 +84,7 @@ namespace DesignPatterns.PizzaDecoratorFluentBuilder.UnitTests
         {
             var sauce = Sauces.Tomato;
             var crust = Crusts.Classic;
-            var topping = Toppings.Cheese;
+            var topping = Toppings.Mozzarella;
             var smallPizza = new SmallPizza();
             var smallPizzaWithSauce = new SauceDecorator(smallPizza, sauce);
             var smallPizzaWithSauceAndCrust = new CrustDecorator(smallPizzaWithSauce, crust);
@@ -105,7 +105,7 @@ namespace DesignPatterns.PizzaDecoratorFluentBuilder.UnitTests
         {
             var sauce = Sauces.Tomato;
             var crust = Crusts.Classic;
-            var toppingOne = Toppings.Cheese;
+            var toppingOne = Toppings.Mozzarella;
             var toppingTwo = Toppings.Ham;
             var smallPizza = new SmallPizza();
             var smallPizzaWithSauce = new SauceDecorator(smallPizza, sauce);
