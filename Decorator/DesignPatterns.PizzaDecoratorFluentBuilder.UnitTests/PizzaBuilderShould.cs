@@ -62,14 +62,17 @@ namespace DesignPatterns.PizzaDecoratorFluentBuilder.UnitTests
         }
 
         [Test]
-        public void CreateSmallPizzaWithCrust_WhenWithCrustIsCalled()
+        public void CreateSmallPizzaWithSauceAndCrust_WhenWithCrustIsCalled()
         {
+            var sauce = Sauces.Tomato;
             var crust = Crusts.Classic;
             var smallPizza = new SmallPizza();
-            var expectedPizza = new CrustDecorator(smallPizza, crust);
+            var smallPizzaWithSauce = new SauceDecorator(smallPizza, sauce);
+            var expectedPizza = new CrustDecorator(smallPizzaWithSauce, crust);
             var customPizza = new PizzaBuilder();
 
             customPizza.CreatePizzaWithSize(Size.Small)
+                .WithSauce(sauce)
                 .WithCrust(crust);
             var actualPizza = customPizza.Bake();
 
@@ -79,13 +82,19 @@ namespace DesignPatterns.PizzaDecoratorFluentBuilder.UnitTests
         [Test]
         public void CreateSmallPizzaWithOneTopping_WhenWithToppingIsCalledOnce()
         {
+            var sauce = Sauces.Tomato;
+            var crust = Crusts.Classic;
             var topping = Toppings.Cheese;
             var smallPizza = new SmallPizza();
-            var expectedPizza = new ToppingDecorator(smallPizza, topping);
+            var smallPizzaWithSauce = new SauceDecorator(smallPizza, sauce);
+            var smallPizzaWithSauceAndCrust = new CrustDecorator(smallPizzaWithSauce, crust);
+            var expectedPizza = new ToppingDecorator(smallPizzaWithSauceAndCrust, topping);
             var customPizza = new PizzaBuilder();
 
             customPizza.CreatePizzaWithSize(Size.Small)
-                .WithTopping(topping);
+                .WithSauce(sauce)
+                .WithCrust(crust)
+                .AddTopping(topping);
             var actualPizza = customPizza.Bake();
 
             actualPizza.Should().BeEquivalentTo(expectedPizza);
@@ -94,30 +103,10 @@ namespace DesignPatterns.PizzaDecoratorFluentBuilder.UnitTests
         [Test]
         public void CreateSmallPizzaWithTwoTopping_WhenWithToppingIsCalledTwice()
         {
-            var toppingOne = Toppings.Cheese;
-            var toppingTwo = Toppings.Ham;
-            var smallPizza = new SmallPizza();
-            var smallPizzaWithOneTopping = new ToppingDecorator(smallPizza, toppingOne);
-            var expectedPizza = new ToppingDecorator(smallPizzaWithOneTopping, toppingTwo);
-            var customPizza = new PizzaBuilder();
-
-            customPizza.CreatePizzaWithSize(Size.Small)
-                .WithTopping(toppingOne)
-                .WithTopping(toppingTwo);
-            var actualPizza = customPizza.Bake();
-
-            actualPizza.Should().BeEquivalentTo(expectedPizza);
-        }
-
-        [Test]
-        public void CreateSmallPizzaWithAllProperties_WhenBakeIsCalled()
-        {
-            var size = Size.Small;
             var sauce = Sauces.Tomato;
             var crust = Crusts.Classic;
             var toppingOne = Toppings.Cheese;
             var toppingTwo = Toppings.Ham;
-
             var smallPizza = new SmallPizza();
             var smallPizzaWithSauce = new SauceDecorator(smallPizza, sauce);
             var smallPizzaWithSauceAndCrust = new CrustDecorator(smallPizzaWithSauce, crust);
@@ -125,11 +114,11 @@ namespace DesignPatterns.PizzaDecoratorFluentBuilder.UnitTests
             var expectedPizza = new ToppingDecorator(smallPizzaWithSauceCrustAndOneTopping, toppingTwo);
             var customPizza = new PizzaBuilder();
 
-            customPizza.CreatePizzaWithSize(size)
+            customPizza.CreatePizzaWithSize(Size.Small)
                 .WithSauce(sauce)
                 .WithCrust(crust)
-                .WithTopping(toppingOne)
-                .WithTopping(toppingTwo);
+                .AddTopping(toppingOne)
+                .AddTopping(toppingTwo);
             var actualPizza = customPizza.Bake();
 
             actualPizza.Should().BeEquivalentTo(expectedPizza);

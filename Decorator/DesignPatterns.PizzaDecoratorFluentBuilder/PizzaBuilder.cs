@@ -5,11 +5,11 @@ using DesignPatterns.PizzaDecorator.ConcreteDecorators;
 
 namespace DesignPatterns.PizzaDecoratorFluentBuilder
 {
-    public class PizzaBuilder
+    public class PizzaBuilder : IPizzaBuilderSauce, IPizzaBuilderCrust, IPizzaBuilderToppings
     {
         private Pizza pizza;
 
-        public PizzaBuilder CreatePizzaWithSize(Size size)
+        public IPizzaBuilderSauce CreatePizzaWithSize(Size size)
         {
             switch (size)
             {
@@ -30,19 +30,19 @@ namespace DesignPatterns.PizzaDecoratorFluentBuilder
             return this;
         }
 
-        public PizzaBuilder WithSauce(Sauces sauce)
+        public IPizzaBuilderCrust WithSauce(Sauces sauce)
         {
             pizza = new SauceDecorator(pizza, sauce);
             return this;
         }
 
-        public PizzaBuilder WithCrust(Crusts crust)
+        public IPizzaBuilderToppings WithCrust(Crusts crust)
         {
             pizza = new CrustDecorator(pizza, crust);
             return this;
         }
 
-        public PizzaBuilder WithTopping(Toppings topping)
+        public IPizzaBuilderToppings AddTopping(Toppings topping)
         {
             pizza = new ToppingDecorator(pizza, topping);
             return this;
