@@ -112,13 +112,13 @@ namespace DesignPatterns.PizzaDecoratorFluentBuilder.UnitTests
         [Test]
         public void CreateSmallPizzaWithAllProperties_WhenBakeIsCalled()
         {
-            var size = Size.Medium;
+            var size = Size.Small;
             var sauce = Sauces.Tomato;
             var crust = Crusts.Classic;
             var toppingOne = Toppings.Cheese;
             var toppingTwo = Toppings.Ham;
 
-            var smallPizza = new MediumPizza();
+            var smallPizza = new SmallPizza();
             var smallPizzaWithSauce = new SauceDecorator(smallPizza, sauce);
             var smallPizzaWithSauceAndCrust = new CrustDecorator(smallPizzaWithSauce, crust);
             var smallPizzaWithSauceCrustAndOneTopping = new ToppingDecorator(smallPizzaWithSauceAndCrust, toppingOne);
