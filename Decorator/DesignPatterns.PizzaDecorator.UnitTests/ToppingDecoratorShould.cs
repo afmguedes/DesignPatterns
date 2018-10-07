@@ -1,6 +1,5 @@
 ﻿using DesignPatterns.PizzaDecorator.ConcreteComponents;
 using DesignPatterns.PizzaDecorator.ConcreteDecorators;
-using DesignPatterns.PizzaDecorator.Decorator;
 using FluentAssertions;
 using NUnit.Framework;
 

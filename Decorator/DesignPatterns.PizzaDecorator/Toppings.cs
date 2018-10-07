@@ -3,6 +3,8 @@
     public enum Toppings
     {
         BlackOlives,
+        Cheese,
+        Ham,
         Mushrooms,
         Bacon
     }

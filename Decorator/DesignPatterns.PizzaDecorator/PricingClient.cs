@@ -41,9 +41,11 @@
             switch (topping)
             {
                 case Toppings.BlackOlives:
+                case Toppings.Cheese:
                 case Toppings.Mushrooms:
                     return tierOneToppingCost;
                 case Toppings.Bacon:
+                case Toppings.Ham:
                     return tierTwoToppingCost;
                 default:
                     return 0.0;
