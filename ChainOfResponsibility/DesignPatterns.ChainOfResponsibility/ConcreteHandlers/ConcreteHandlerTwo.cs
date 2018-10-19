@@ -1,6 +1,8 @@
-﻿namespace DesignPatterns.ChainOfResponsibility.ConcreteHandlers
+﻿using DesignPatterns.ChainOfResponsibility.Handlers;
+
+namespace DesignPatterns.ChainOfResponsibility.ConcreteHandlers
 {
-    public class ConcreteHandlerTwo : Handler.Handler
+    public class ConcreteHandlerTwo : Handler
     {
         public override int Handle(int requestType)
         {
@@ -9,7 +11,12 @@
                 return 2;
             }
 
-            return Successor.Handle(requestType);
+            if (Successor != null)
+            {
+                return Successor.Handle(requestType);
+            }
+
+            return -1;
         }
     }
 }

@@ -1,6 +1,8 @@
-﻿namespace DesignPatterns.ChainOfResponsibility.UnitTests
+﻿using DesignPatterns.ChainOfResponsibility.Handlers;
+
+namespace DesignPatterns.ChainOfResponsibility.UnitTests
 {
-    public class ConcreteHandlerOne : Handler.Handler
+    public class ConcreteHandlerOne : Handler
     {
         public override int Handle(int requestType)
         {
@@ -9,7 +11,12 @@
                 return 1;
             }
 
-            return Successor.Handle(requestType);
+            if (Successor != null)
+            {
+                return Successor.Handle(requestType);
+            }
+
+            return -1;
         }
     }
 }

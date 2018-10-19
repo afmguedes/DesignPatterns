@@ -19,6 +19,18 @@ namespace DesignPatterns.ChainOfResponsibility.UnitTests
         }
 
         [Test]
+        public void ReturnMinusOneIfSuccessorIsNotSet_WhenHandleRequestIsCalled()
+        {
+            var requestType = 2;
+            var expectedConcreteHandlerNumber = -1;
+            var concreteHandlerOne = new ConcreteHandlerOne();
+
+            var handledBy = concreteHandlerOne.Handle(requestType);
+
+            handledBy.Should().Be(expectedConcreteHandlerNumber);
+        }
+
+        [Test]
         public void ReturnOneForRequestsOfTypeOne_WhenHandleRequestIsCalled()
         {
             var requestType = 1;

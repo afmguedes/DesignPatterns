@@ -17,5 +17,17 @@ namespace DesignPatterns.ChainOfResponsibility.UnitTests
 
             concreteHandlerTwo.Successor.Should().Be(concreteHandlerThree);
         }
+
+        [Test]
+        public void ReturnMinusOneIfSuccessorIsNotSet_WhenHandleRequestIsCalled()
+        {
+            var requestType = 3;
+            var expectedConcreteHandlerNumber = -1;
+            var concreteHandlerTwo = new ConcreteHandlerTwo();
+
+            var handledBy = concreteHandlerTwo.Handle(requestType);
+
+            handledBy.Should().Be(expectedConcreteHandlerNumber);
+        }
     }
 }

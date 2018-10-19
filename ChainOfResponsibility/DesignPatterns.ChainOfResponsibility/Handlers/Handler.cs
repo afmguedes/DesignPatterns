@@ -1,4 +1,4 @@
-﻿namespace DesignPatterns.ChainOfResponsibility.Handler
+﻿namespace DesignPatterns.ChainOfResponsibility.Handlers
 {
     public abstract class Handler
     {

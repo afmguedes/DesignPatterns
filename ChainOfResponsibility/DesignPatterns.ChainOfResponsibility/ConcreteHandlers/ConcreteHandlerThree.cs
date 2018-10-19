@@ -1,6 +1,8 @@
-﻿namespace DesignPatterns.ChainOfResponsibility.ConcreteHandlers
+﻿using DesignPatterns.ChainOfResponsibility.Handlers;
+
+namespace DesignPatterns.ChainOfResponsibility.ConcreteHandlers
 {
-    public class ConcreteHandlerThree : Handler.Handler
+    public class ConcreteHandlerThree : Handler
     {
         public override int Handle(int requestType)
         {
