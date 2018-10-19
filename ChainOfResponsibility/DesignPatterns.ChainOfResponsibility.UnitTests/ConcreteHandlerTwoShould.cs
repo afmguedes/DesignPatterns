@@ -12,7 +12,6 @@ namespace DesignPatterns.ChainOfResponsibility.UnitTests
             var concreteHandlerTwo = new ConcreteHandlerTwo();
             var concreteHandlerThree = new ConcreteHandlerThree();
 
-
             concreteHandlerTwo.SetSuccessor(concreteHandlerThree);
 
             concreteHandlerTwo.Successor.Should().Be(concreteHandlerThree);

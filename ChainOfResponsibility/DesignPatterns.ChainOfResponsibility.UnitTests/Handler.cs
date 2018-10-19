@@ -8,5 +8,7 @@
         {
             Successor = handler;
         }
+
+        public abstract int Handle(int requestType);
     }
 }
