@@ -1,4 +1,4 @@
-﻿namespace DesignPatterns.ChainOfResponsibility.UnitTests
+﻿namespace DesignPatterns.ChainOfResponsibility.Handler
 {
     public abstract class Handler
     {

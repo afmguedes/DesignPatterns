@@ -1,4 +1,5 @@
-﻿using FluentAssertions;
+﻿using DesignPatterns.ChainOfResponsibility.ConcreteHandlers;
+using FluentAssertions;
 using NUnit.Framework;
 
 namespace DesignPatterns.ChainOfResponsibility.UnitTests

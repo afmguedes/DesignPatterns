@@ -1,6 +1,6 @@
-﻿namespace DesignPatterns.ChainOfResponsibility.UnitTests
+﻿namespace DesignPatterns.ChainOfResponsibility.ConcreteHandlers
 {
-    public class ConcreteHandlerTwo : Handler
+    public class ConcreteHandlerTwo : Handler.Handler
     {
         public override int Handle(int requestType)
         {
