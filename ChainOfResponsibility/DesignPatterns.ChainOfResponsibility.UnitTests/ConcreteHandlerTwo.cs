@@ -1,12 +1,6 @@
 ﻿namespace DesignPatterns.ChainOfResponsibility.UnitTests
 {
-    public class ConcreteHandlerTwo
+    public class ConcreteHandlerTwo : Handler
     {
-        public ConcreteHandlerThree Successor;
-
-        public void SetSuccessor(ConcreteHandlerThree concreteHandler)
-        {
-            Successor = concreteHandler;
-        }
     }
 }

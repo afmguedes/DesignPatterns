@@ -1,6 +1,6 @@
 ﻿namespace DesignPatterns.ChainOfResponsibility.UnitTests
 {
-    public class ConcreteHandlerThree
+    public class ConcreteHandlerThree : Handler
     {
     }
 }
