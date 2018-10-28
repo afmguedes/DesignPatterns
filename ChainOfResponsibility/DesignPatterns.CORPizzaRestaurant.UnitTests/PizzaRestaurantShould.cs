@@ -11,15 +11,18 @@ namespace DesignPatterns.CORPizzaRestaurant.UnitTests
         [Test]
         public void ReturnFullRestaurantHierarchy_WhenGetHierarchyIsCalled()
         {
-            var expectedHierarchy = new List<Type>
+            var expectedHeadChef = "Adrian";
+            var expectedKitchenManager = "David";
+            var expectedGeneralManager = "Yuliya";
+            var expectedHierarchy = new List<Tuple<string, Type>>
             {
-                typeof(HeadChef),
-                typeof(KitchenManager),
-                typeof(GeneralManager)
+                new Tuple<string, Type>(expectedHeadChef, typeof(HeadChef)),
+                new Tuple<string, Type>(expectedKitchenManager, typeof(KitchenManager)),
+                new Tuple<string, Type>(expectedGeneralManager, typeof(GeneralManager))
             };
-            var headChef = new HeadChef("Adrian");
-            var kitchenManager = new KitchenManager("David");
-            var generalManager = new GeneralManager("Yuliya");
+            var headChef = new HeadChef(expectedHeadChef);
+            var kitchenManager = new KitchenManager(expectedKitchenManager);
+            var generalManager = new GeneralManager(expectedGeneralManager);
             var pizzaRestaurant = new PizzaRestaurant(headChef, kitchenManager, generalManager);
 
             var restaurantHierarchy = pizzaRestaurant.GetHierarchy();

@@ -15,17 +15,17 @@ namespace DesignPatterns.CORPizzaRestaurant
             this.headChef.Supervisor = kitchenManager;
         }
 
-        public List<Type> GetHierarchy()
+        public List<Tuple<string, Type>> GetHierarchy()
         {
-            var restaurantHierarchy = new List<Type>();
+            var restaurantHierarchy = new List<Tuple<string, Type>>();
 
             Approver employee = headChef;
-            restaurantHierarchy.Add(employee.GetType());
+            restaurantHierarchy.Add(new Tuple<string, Type>(employee.Name, employee.GetType()));
 
             while (employee.Supervisor != null)
             {
                 employee = employee.Supervisor;
-                restaurantHierarchy.Add(employee.GetType());
+                restaurantHierarchy.Add(new Tuple<string, Type>(employee.Name, employee.GetType()));
             }
 
             return restaurantHierarchy;
