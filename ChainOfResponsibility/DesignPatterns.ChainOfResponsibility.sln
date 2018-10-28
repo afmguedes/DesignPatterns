@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesignPatterns.CORPizzaRest
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesignPatterns.CORPizzaRestaurant", "DesignPatterns.CORPizzaRestaurant\DesignPatterns.CORPizzaRestaurant.csproj", "{4C63435F-8516-4576-A1A2-C4D7656956BD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesignPatterns.PizzaRestaurant", "DesignPatterns.PizzaRestaurant\DesignPatterns.PizzaRestaurant.csproj", "{7958622B-E8E9-4F3A-A066-D777EC4631E8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,6 +37,10 @@ Global
 		{4C63435F-8516-4576-A1A2-C4D7656956BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4C63435F-8516-4576-A1A2-C4D7656956BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4C63435F-8516-4576-A1A2-C4D7656956BD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7958622B-E8E9-4F3A-A066-D777EC4631E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7958622B-E8E9-4F3A-A066-D777EC4631E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7958622B-E8E9-4F3A-A066-D777EC4631E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7958622B-E8E9-4F3A-A066-D777EC4631E8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
