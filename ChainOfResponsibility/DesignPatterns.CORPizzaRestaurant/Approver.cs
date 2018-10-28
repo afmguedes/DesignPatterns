@@ -2,7 +2,13 @@
 {
     public abstract class Approver
     {
+        public string Name;
         public Approver Supervisor;
+
+        protected Approver(string name)
+        {
+            Name = name;
+        }
 
         public void SetSupervisor(Approver approver)
         {

@@ -9,8 +9,8 @@ namespace DesignPatterns.CORPizzaRestaurant.UnitTests
         [Test]
         public void SetSupervisor_WhenSetSupervisorIsCalled()
         {
-            var headChef = new HeadChef();
-            var kitchenManager = new KitchenManager();
+            var headChef = new HeadChef("Roberto");
+            var kitchenManager = new KitchenManager("Rob");
 
             headChef.SetSupervisor(kitchenManager);
 
@@ -20,9 +20,10 @@ namespace DesignPatterns.CORPizzaRestaurant.UnitTests
         [Test]
         public void ReturnApprovedByHeadChef_WhenApproveOrderIsCalledWithTotalLessThan100()
         {
-            var expectedApproval = "Approved by HeadChef";
+            var expectedApprover = "David";
+            var expectedApproval = $"Approved by {expectedApprover}";
             var orderTotal = 99;
-            var headChef = new HeadChef();
+            var headChef = new HeadChef(expectedApprover);
 
             var approval = headChef.ApproveOrder(orderTotal);
 
@@ -32,10 +33,11 @@ namespace DesignPatterns.CORPizzaRestaurant.UnitTests
         [Test]
         public void ReturnApprovedByKitchenManager_WhenApproveOrderIsCalledWithTotalBetween100And499()
         {
-            var expectedApproval = "Approved by KitchenManager";
+            var expectedApprover = "Adrian";
+            var expectedApproval = $"Approved by {expectedApprover}";
             var orderTotal = 499;
-            var headChef = new HeadChef();
-            var kitchenMannager = new KitchenManager();
+            var headChef = new HeadChef("John");
+            var kitchenMannager = new KitchenManager(expectedApprover);
             headChef.SetSupervisor(kitchenMannager);
 
             var approval = headChef.ApproveOrder(orderTotal);
@@ -46,11 +48,12 @@ namespace DesignPatterns.CORPizzaRestaurant.UnitTests
         [Test]
         public void ReturnApprovedByGeneralManager_WhenApproveOrderIsCalledWithTotalBetween500And2499()
         {
-            var expectedApproval = "Approved by GeneralManager";
+            var expectedApprover = "Yuliya";
+            var expectedApproval = $"Approved by {expectedApprover}";
             var orderTotal = 2499;
-            var headChef = new HeadChef();
-            var kitchenMannager = new KitchenManager();
-            var generalManager = new GeneralManager();
+            var headChef = new HeadChef("Arun");
+            var kitchenMannager = new KitchenManager("Thiago");
+            var generalManager = new GeneralManager(expectedApprover);
             headChef.SetSupervisor(kitchenMannager);
             kitchenMannager.SetSupervisor(generalManager);
 
@@ -64,9 +67,9 @@ namespace DesignPatterns.CORPizzaRestaurant.UnitTests
         {
             var expectedApproval = "Requires Board Meeting";
             var orderTotal = 2500;
-            var headChef = new HeadChef();
-            var kitchenMannager = new KitchenManager();
-            var generalManager = new GeneralManager();
+            var headChef = new HeadChef("Jonathan");
+            var kitchenMannager = new KitchenManager("Charlie");
+            var generalManager = new GeneralManager("Nick");
             headChef.SetSupervisor(kitchenMannager);
             kitchenMannager.SetSupervisor(generalManager);
 

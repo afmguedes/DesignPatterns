@@ -17,10 +17,10 @@ namespace DesignPatterns.CORPizzaRestaurant.UnitTests
                 typeof(KitchenManager),
                 typeof(GeneralManager)
             };
-            var roberto = new HeadChef();
-            var rob = new KitchenManager();
-            var yuliya = new GeneralManager();
-            var pizzaRestaurant = new PizzaRestaurant(roberto, rob, yuliya);
+            var headChef = new HeadChef("Adrian");
+            var kitchenManager = new KitchenManager("David");
+            var generalManager = new GeneralManager("Yuliya");
+            var pizzaRestaurant = new PizzaRestaurant(headChef, kitchenManager, generalManager);
 
             var restaurantHierarchy = pizzaRestaurant.GetHierarchy();
 
@@ -32,16 +32,16 @@ namespace DesignPatterns.CORPizzaRestaurant.UnitTests
         {
             var expectedApprovals = new List<string>
             {
-                "Approved by GeneralManager",
-                "Approved by KitchenManager",
+                "Approved by Rob",
+                "Approved by John",
                 "Requires Board Meeting",
-                "Approved by HeadChef"
+                "Approved by Roberto"
             };
             var orderTotals = new[] { 1000, 150, 5000, 50 };
-            var roberto = new HeadChef();
-            var rob = new KitchenManager();
-            var yuliya = new GeneralManager();
-            var pizzaRestaurant = new PizzaRestaurant(roberto, rob, yuliya);
+            var headChef = new HeadChef("Roberto");
+            var kitchenManager = new KitchenManager("John");
+            var generalManager = new GeneralManager("Rob");
+            var pizzaRestaurant = new PizzaRestaurant(headChef, kitchenManager, generalManager);
 
             var approvals = pizzaRestaurant.ProcessOrders(orderTotals);
 
